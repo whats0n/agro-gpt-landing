@@ -1,0 +1,10 @@
+.title-lg {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 31px;
+
+  @include media($to: md) {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}

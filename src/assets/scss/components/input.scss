@@ -1,0 +1,23 @@
+.input {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+
+  &__control {
+    padding-inline: 20px;
+    width: 100%;
+    height: 48px;
+    border-radius: 10px;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.06);
+    font-size: 16px;
+    line-height: normal;
+
+    @include media($to: md) {
+      height: 46px;
+    }
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.31);
+    }
+  }
+}

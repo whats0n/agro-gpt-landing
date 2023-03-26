@@ -1,0 +1,40 @@
+$breakpoints: (
+  sm: 768px,
+  md: 900px,
+  lg: 1200px,
+);
+
+@function has-breakpoint($bp: null) {
+  @return map.has-key($breakpoints, $bp);
+}
+
+@function resolve-breakpoint($bp: null) {
+  @if has-breakpoint($bp) {
+    @return map.get($breakpoints, $bp);
+  }
+
+  @return $bp;
+}
+
+@mixin media($from: null, $to: null) {
+  $from: if(
+    $from,
+    if(has-breakpoint($from), resolve-breakpoint($from) + 1, $from),
+    null
+  );
+  $to: resolve-breakpoint($to);
+
+  @if $from != null and $to != null {
+    @media screen and (min-width: $from) and (max-width: $to) {
+      @content;
+    }
+  } @else if $from != null {
+    @media screen and (min-width: $from) {
+      @content;
+    }
+  } @else if $to != null {
+    @media screen and (max-width: $to) {
+      @content;
+    }
+  }
+}

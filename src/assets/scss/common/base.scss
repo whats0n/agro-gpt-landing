@@ -1,0 +1,21 @@
+html {
+  font-family: 'Inter', sans-serif;
+
+  * {
+    font-family: inherit;
+  }
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+  min-width: 320px;
+  color: #FFFFFF;
+  font-size: 14px;
+  line-height: 1.4;
+  background: linear-gradient(167.4deg, #242229 9.13%, #1C1820 120.45%), #FFFFFF;
+}
+
+.out {
+  overflow: hidden;
+}

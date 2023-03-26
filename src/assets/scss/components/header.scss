@@ -1,0 +1,22 @@
+.header {
+  padding: 42px 0;
+
+  @include media($to: sm) {
+    padding: 34px 0;
+  }
+
+  &__logo {
+    display: block;
+    width: 128px;
+
+    @include media($to: sm) {
+      margin: 0 auto;
+      width: 158px;
+    }
+  }
+
+  &__icon {
+    display: block;
+    width: 100%;
+  }
+}

@@ -1,0 +1,86 @@
+.background {
+  position: absolute;
+  z-index: -1;
+  inset-block: 0;
+  inset-inline: 0;
+  overflow: hidden;
+}
+
+.rect-1 {
+  position: absolute;
+  width: 185px;
+  height: 216px;
+  left: -50px;
+  top: 83px;
+
+  background: rgba(207, 71, 255, 0.6);
+  filter: blur(274px);
+}
+
+.rect-2 {
+  position: absolute;
+  width: 185px;
+  height: 216px;
+  left: 1094px;
+  top: 411px;
+
+  background: #C956FF;
+  filter: blur(199px);
+}
+
+.rect-3 {
+  position: absolute;
+  width: 185px;
+  height: 216px;
+  left: 122px;
+  top: 965px;
+
+  background: rgba(151, 71, 255, 0.2);
+  filter: blur(199px);
+}
+
+.rect-4 {
+  position: absolute;
+  width: 185px;
+  height: 216px;
+  left: 682px;
+  top: 226px;
+
+  background: #5956FF;
+  filter: blur(199px);
+}
+
+.rect-5 {
+  position: absolute;
+  width: 185px;
+  height: 216px;
+  left: 938px;
+  top: 1158px;
+
+  background: #5956FF;
+  opacity: 0.5;
+  filter: blur(199px);
+}
+
+.rect-6 {
+  position: absolute;
+  width: 185px;
+  height: 216px;
+  left: 84px;
+  top: 2039px;
+
+  background: rgba(151, 71, 255, 0.6);
+  filter: blur(199px);
+}
+
+.rect-7 {
+  position: absolute;
+  width: 185px;
+  height: 216px;
+  left: 482px;
+  top: 1733px;
+
+  background: #5956FF;
+  opacity: 0.72;
+  filter: blur(199px);
+}

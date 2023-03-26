@@ -1,0 +1,28 @@
+.video {
+  margin-bottom: 187px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(6.5px);
+  aspect-ratio: 1/#{math.div(674, 1170)};
+
+  @include media($to: sm) {
+    margin-bottom: 111px;
+    border-radius: 24px;
+  }
+
+  &__iframe {
+    position: absolute;
+    inset: 20px;
+    border-radius: 12px;
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+
+    @include media($to: sm) {
+      inset: 7px;
+      width: calc(100% - 14px);
+      height: calc(100% - 14px);
+    }
+  }
+}

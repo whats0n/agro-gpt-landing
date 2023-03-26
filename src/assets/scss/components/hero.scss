@@ -1,0 +1,86 @@
+.hero {
+  @include media($from: sm) {
+    display: grid;
+    align-items: center;
+    grid-template-columns: math.div(1208 - 694, 1208) * 100% math.div(694, 1208) * 100%;
+    margin-block: 105px 190px;
+    margin-right: 97px - 135px;
+  }
+
+  @include media($to: sm) {
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+    margin-bottom: 134px;
+  }
+
+  &__content {
+    @include media($from: sm) {
+      padding-right: 19px;
+    }
+
+    @include media($to: sm) {
+      margin-top: 68px;
+    }
+  }
+
+  &__picture {
+    position: relative;
+
+    @include media($to: sm) {
+      margin-inline: -15px;
+    }
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-weight: 900;
+    font-size: 54px;
+    line-height: 144.02%;
+
+    @include media($to: md) {
+      font-size: 37px;
+    }
+
+    @include media($to: sm) {
+      max-width: 500px;
+      margin-inline: auto;
+    }
+
+    span {
+      color: rgba(130, 86, 255, 1);
+    }
+  }
+
+  &__text {
+    margin-bottom: 20px;
+    color: #99979B;
+    font-size: 21px;
+    line-height: 163.52%;
+  }
+}
+
+.top-circle {
+  position: absolute;
+  z-index: -1;
+  height: auto;
+  pointer-events: none;
+
+  @include media($from: sm) {
+    top: math.div(427, 433) * -100%;
+    right: math.div(399, 694) * -100%;
+    width: math.div(1296, 694) * 100%;
+  }
+
+  @include media($to: sm) {
+    top: math.div(131, 233) * -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: math.div(574, 373) * 100%;
+  }
+}

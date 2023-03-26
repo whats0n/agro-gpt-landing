@@ -1,0 +1,73 @@
+.contacts {
+  @include media($from: sm) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 126px;
+  }
+
+  @include media($to: sm) {
+    margin-bottom: 59px;
+  }
+
+  &__content {
+    @include media($from: sm) {
+      order: 1;
+      padding-inline: 10px;
+      width: math.div(480, 1170) * 100%;
+    }
+
+    @include media($to: sm) {
+      margin-bottom: 55px;
+    }
+  }
+
+  &__form {
+    position: relative;
+
+    @include media($from: sm) {
+      width: math.div(570, 1170) * 100%;
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 48px;
+
+    @include media($to: sm) {
+      margin-bottom: 43px;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 27px;
+
+    @include media($to: sm) {
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+}
+
+.bottom-circle {
+  position: absolute;
+  z-index: -1;
+  height: auto;
+  pointer-events: none;
+
+  @include media($from: sm) {
+    left: math.div(233, 570) * -100%;
+    top: math.div(185, 243) * -100%;
+    width: math.div(1015, 570) * 100%;
+  }
+
+  @include media($to: sm) {
+    top: 50%;
+    left: 50%;
+    width: math.div(628, 345) * 100%;
+    transform: translate(-50%, -50%);
+  }
+}
