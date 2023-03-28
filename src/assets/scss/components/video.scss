@@ -1,14 +1,20 @@
 .video {
   margin-bottom: 187px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(6.5px);
-  aspect-ratio: 1/#{math.div(674, 1170)};
 
   @include media($to: sm) {
     margin-bottom: 111px;
-    border-radius: 24px;
+  }
+
+  &__container {
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(6.5px);
+    aspect-ratio: 1/#{math.div(674, 1170)};
+
+    @include media($to: sm) {
+      border-radius: 24px;
+    }
   }
 
   &__iframe {
@@ -23,6 +29,19 @@
       inset: 7px;
       width: calc(100% - 14px);
       height: calc(100% - 14px);
+    }
+  }
+
+  &__text {
+    margin: 24px auto 0;
+    max-width: 700px;
+    font-size: 16px;
+    line-height: 27px;
+    text-align: center;
+
+    @include media($to: sm) {
+      font-size: 14px;
+      line-height: 24px;
     }
   }
 }
